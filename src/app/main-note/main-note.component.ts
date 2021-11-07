@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-note.component.css']
 })
 export class MainNoteComponent implements OnInit {
+  
+  pageTitle: string = "Notepad";
 
   constructor() { }
 

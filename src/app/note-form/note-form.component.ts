@@ -8,7 +8,7 @@ import { Note } from '../note';
 })
 export class NoteFormComponent implements OnInit {
 
-  pageTitle: string = "Notepad";
+  
   formTitle: string = "Enter the Note";
   noteTitle!: string;
   noteMessage!: string;

@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <h3 class="display-3 text-center"> {{pageTitle}} </h3>
+        
         
       <div class="col-md-5">
         <form  #quoteForm='ngForm' (ngSubmit)="formSubmit()">
@@ -21,10 +21,17 @@
         </form>
      </div>
 
-     <div class="col-md-7">
-       <h5>Title: {{noteTitle}}</h5>
-       <p> Message: {{noteMessage}}</p>
+     <div class="col-md-7 text-center">
+
+      <div class="card p-2" *ngFor="let note of notes">
+        <p>{{note.noteTitle}}</p>
+        <p>{{note.noteMessage}}</p>
+      </div>
+
+       <h5> {{noteTitle}} </h5>
+       <p> {{noteMessage}} </p>
      </div>
 
+     
     </div>
 </div>
