@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./note-form.component.css']
 })
 export class NoteFormComponent implements OnInit {
-
+  pageTitle: string = "Notepad";
+  formTitle: string = "Enter the Note"
   constructor() { }
 
   ngOnInit(): void {
