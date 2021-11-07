@@ -3,19 +3,27 @@
         <h3 class="display-3 text-center"> {{pageTitle}} </h3>
         
       <div class="col-md-5">
-        <form>
+        <form  #quoteForm='ngForm' (ngSubmit)="formSubmit()">
             <h5 class="display-5"> {{formTitle}} </h5>
             <div class="form-group">
               <label for="title">Title</label>
-              <input type="title" class="form-control" id="title" aria-describedby="titleHelp" placeholder="Enter title">
+              <input type="title" class="form-control" id="title" aria-describedby="titleHelp"
+               placeholder="Enter title" [(ngModel)] = "noteTitle" name="first">
             </div>
             <div class="form-group">
               <label for="note">Note</label>
-              <input type="note" class="form-control p-4" id="note" placeholder="Enter note">
+              <input type="note" class="form-control p-4" id="note" placeholder="Enter note"
+              [(ngModel)] = "noteMessage" name="second">
             </div>
             <button type="button" class="btn btn-success btm-sm m-3"> Submit </button>
-            <button type="button" class="btn btn-secondary"> Cancel </button>
+            <button type="button" class="btn btn-secondary m-3" > Cancel </button>
+           
         </form>
+     </div>
+
+     <div class="col-md-7">
+       <h5>Title: {{noteTitle}}</h5>
+       <p> Message: {{noteMessage}}</p>
      </div>
 
     </div>

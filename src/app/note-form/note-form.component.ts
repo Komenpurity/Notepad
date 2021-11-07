@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Note } from '../note';
 
 @Component({
   selector: 'app-note-form',
@@ -6,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./note-form.component.css']
 })
 export class NoteFormComponent implements OnInit {
+
   pageTitle: string = "Notepad";
-  formTitle: string = "Enter the Note"
-  constructor() { }
+  formTitle: string = "Enter the Note";
+  noteTitle!: string;
+  noteMessage!: string;
+  newNote!: any;
+
+  notes: Note[] = [
+    new Note("School Assignment", "Finish up the data structures assignment")
+
+  ];
+
+  formSubmit(){
+    this.newNote = new Note(this.noteTitle,this.noteMessage);
+    this.notes.push(this.newNote);
+  }
+
 
   ngOnInit(): void {
   }
